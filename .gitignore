@@ -1,0 +1,12 @@
+Pipfile
+Pipfile.lock
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+*.env
+*.env.*
+*.pytest_cache/
