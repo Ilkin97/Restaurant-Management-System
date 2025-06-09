@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from ..models import DailyReport
+from apps.reports.models import DailyReport
 
 
 class DailyReportSerializer(serializers.ModelSerializer):

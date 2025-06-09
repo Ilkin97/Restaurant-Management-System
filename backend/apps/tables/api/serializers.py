@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from ..models import Table
+from apps.tables.models import Table
 
 
 class TableSerializer(serializers.ModelSerializer):

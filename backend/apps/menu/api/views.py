@@ -1,8 +1,8 @@
 from rest_framework import generics, status
 from rest_framework.permissions import IsAuthenticated
-from ..models import Category, Product, Favorite
+from apps.menu.models import Category, Product, Favorite
 from .serializers import CategorySerializer, ProductSerializer, FavoriteSerializer
-from ..permissions import IsAdmin
+from apps.menu.permissions import IsAdmin
 
 
 # View for listing all categories.

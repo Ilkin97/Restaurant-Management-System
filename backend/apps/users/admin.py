@@ -25,6 +25,6 @@ class CustomUserAdmin(UserAdmin):
     )
 
 # Customizing the admin panel headers
-admin.site.site_header = "Restaurant Management System"
+admin.site.site_header = "RMS"
 admin.site.site_title = "Restaurant Management System"
 admin.site.index_title = "Welcome to the Restaurant Management System"

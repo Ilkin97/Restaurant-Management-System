@@ -1,8 +1,15 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import CustomUserViewSet, SuperAdminViewSet, StaffViewSet
+from .views import (
+    CustomUserViewSet, 
+    SuperAdminViewSet, 
+    StaffViewSet, 
+    RegisterView, 
+    LoginView, 
+    LogoutView
+)
+
 from django.urls import path
-from .views import RegisterView, LoginView, LogoutView
 
 # Create a DefaultRouter instance to automatically generate URL routes for viewsets
 router = DefaultRouter()

@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth import authenticate
 from django.contrib.auth import get_user_model
-from ..models import CustomUser
+from apps.users.models import CustomUser
 
 # Get the CustomUser model, which may be customized
 CustomUser = get_user_model()  # This will use the custom user model defined in the project settings

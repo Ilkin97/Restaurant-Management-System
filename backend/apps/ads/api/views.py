@@ -1,5 +1,5 @@
 from rest_framework import viewsets
-from ..models import Advertisement
+from apps.ads.models import Advertisement
 from .serializers import AdvertisementSerializer
 
 

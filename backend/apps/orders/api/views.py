@@ -1,5 +1,5 @@
 from rest_framework import viewsets
-from ..models import Order, OrderItem
+from apps.orders.models import Order, OrderItem
 from .serializers import OrderSerializer, OrderItemSerializer
 
 

@@ -1,8 +1,8 @@
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
-from ..models import CustomUser
+from apps.users.models import CustomUser
 from .serializers import CustomUserSerializer
-from ..permissions import IsAdmin, IsSuperAdmin, IsStaff
+from apps.users.permissions import IsAdmin, IsSuperAdmin, IsStaff
 
 
 class CustomUserViewSet(viewsets.ModelViewSet):

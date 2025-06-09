@@ -1,5 +1,5 @@
 from rest_framework import viewsets
-from ..models import Feedback
+from apps.feedback.models import Feedback
 from .serializers import FeedbackSerializer
 
 

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from ..models import Category, Product, Favorite
+from apps.menu.models import Category, Product, Favorite
 
 
 class CategorySerializer(serializers.ModelSerializer):

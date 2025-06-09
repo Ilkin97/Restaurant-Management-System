@@ -1,5 +1,5 @@
 from rest_framework import viewsets
-from ..models import DailyReport
+from apps.reports.models import DailyReport
 from .serializers import DailyReportSerializer
 
 

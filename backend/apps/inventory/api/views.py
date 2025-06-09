@@ -1,5 +1,5 @@
 from rest_framework import viewsets
-from ..models import InventoryItem
+from apps.inventory.models import InventoryItem
 from .serializers import InventoryItemSerializer
 
 
