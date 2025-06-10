@@ -20,6 +20,7 @@ django-jazzmin = "*"
 python-dotenv = "*"
 djangorestframework-simplejwt = "*"
 django-celery-beat = "*"
+dj-database-url = "*"
 
 [dev-packages]
 pytest = "*"
