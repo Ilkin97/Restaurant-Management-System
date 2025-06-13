@@ -1,5 +1,5 @@
 """
-🔧 Django Base Settings – `base.py`
+🔧 Django Base Settings `base.py`
 
 This module defines the **base configuration** for the Django project.
 It includes all settings that are shared across development and production environments.

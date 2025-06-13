@@ -1,0 +1,69 @@
+.
+├── backend
+│   ├── apps
+│   │   ├── ads
+│   │   ├── feedback
+│   │   ├── inventory
+│   │   ├── menu
+│   │   ├── orders
+│   │   ├── reports
+│   │   ├── tables
+│   │   └── users
+│   ├── core
+│   │   ├── asgi.py
+│   │   ├── celery.py
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   ├── settings
+│   │   ├── urls.py
+│   │   └── wsgi.py
+│   ├── db.sqlite3
+│   ├── docker
+│   │   └── Dockerfile
+│   ├── docker-compose.yml
+│   ├── logs
+│   │   └── django.log
+│   ├── manage.py
+│   ├── media
+│   ├── Procfile
+│   ├── requirements.txt
+│   ├── scripts
+│   │   ├── makemigrations.sh
+│   │   ├── migrate.sh
+│   │   └── runserver.sh
+│   ├── static
+│   │   ├── css
+│   │   └── js
+│   ├── templates
+│   └── test
+│       ├── e2e
+│       ├── __init__.py
+│       ├── integrations
+│       ├── test_inventory.py
+│       ├── test_menu.py
+│       ├── test_orders.py
+│       ├── test_users.py
+│       └── unit
+├── backend.txt
+├── docs
+│   └── API.md
+├── infrastructure
+│   ├── CI-CD
+│   │   ├── github-actions.yaml
+│   │   └── jenkinsfile
+│   ├── cloud
+│   │   └── terraform
+│   ├── docker-compose.yml
+│   ├── kubernetes
+│   │   ├── deployment.yaml
+│   │   ├── ingress.yaml
+│   │   └── service.yaml
+│   ├── monitoring
+│   │   └── prometheus.yml
+│   └── nginx
+│       └── default.conf
+├── LICENSE
+├── Pipfile
+└── Pipfile.lock
+
+34 directories, 33 files

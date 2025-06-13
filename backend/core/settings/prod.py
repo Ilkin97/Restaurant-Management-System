@@ -3,6 +3,7 @@ Production settings for Django project.
 Disables debug, uses secure settings, and should be connected to PostgreSQL or another production database.
 """
 
+import os
 from .base import *
 
 DEBUG = False

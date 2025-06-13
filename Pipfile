@@ -6,7 +6,6 @@ name = "pypi"
 [packages]
 django = "*"
 djangorestframework = "*"
-psycopg2-binary = "*"
 celery = "*"
 redis = "*"
 pillow = "*"
@@ -21,6 +20,8 @@ python-dotenv = "*"
 djangorestframework-simplejwt = "*"
 django-celery-beat = "*"
 dj-database-url = "*"
+psycopg2-binary = "*"
+django-import-export = "*"
 
 [dev-packages]
 pytest = "*"

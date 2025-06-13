@@ -2,7 +2,6 @@
 Development settings for Django project.
 Includes settings for local development, like using SQLite and enabling debug mode.
 """
-
 from .base import *
 
 DEBUG = True
