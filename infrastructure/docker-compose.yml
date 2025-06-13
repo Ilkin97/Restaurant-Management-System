@@ -1,4 +1,4 @@
-version: '3.9'
+version: '3.13'
 services:
   backend:
     build: ../backend
@@ -38,3 +38,9 @@ services:
       POSTGRES_USER: youruser
       POSTGRES_PASSWORD: yourpass
       POSTGRES_DB: yourdb
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
+    driver: local

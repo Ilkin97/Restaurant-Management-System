@@ -1,0 +1,41 @@
+pipeline {
+    agent any
+
+    environment {
+        DJANGO_SETTINGS_MODULE = 'backend.core.settings'
+        PYTHONPATH = "${env.WORKSPACE}/backend"
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        stage('Install dependencies') {
+            steps {
+                sh 'pip install -r requirements.txt'
+            }
+        }
+        stage('Lint') {
+            steps {
+                sh 'flake8 backend/'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'python manage.py test'
+            }
+        }
+        stage('Migrate') {
+            steps {
+                sh 'python manage.py migrate'
+            }
+        }
+        stage('Collectstatic') {
+            steps {
+                sh 'python manage.py collectstatic --noinput'
+            }
+        }
+    }
+}
