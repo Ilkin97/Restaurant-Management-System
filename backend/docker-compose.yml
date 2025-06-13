@@ -1,26 +1,51 @@
 version: '3.9'
 
 services:
-  db:
-    image: postgres:15
-    volumes:
-      - postgres_data:/var/lib/postgresql/data/
-    environment:
-      POSTGRES_DB: restaurant_db
-      POSTGRES_USER: restaurant_user
-      POSTGRES_PASSWORD: strongpassword123
-
   web:
-    build: .
-    command: gunicorn restaurant_project.wsgi:application --bind 0.0.0.0:8000
+    build:
+      context: ./backend
+      dockerfile: docker/Dockerfile
+    container_name: django-web
+    command: gunicorn core.wsgi:application --bind 0.0.0.0:8000
     volumes:
-      - .:/app
+      - ./backend:/app
     ports:
       - "8000:8000"
     depends_on:
-      - db
-    environment:
-      - DEBUG=0
+      - redis
+    env_file:
+      - ./backend/.env
 
-volumes:
-  postgres_data:
+  worker:
+    build:
+      context: ./backend
+      dockerfile: docker/Dockerfile
+    container_name: celery-worker
+    command: celery -A core worker --loglevel=info
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - web
+      - redis
+    env_file:
+      - ./backend/.env
+
+  beat:
+    build:
+      context: ./backend
+      dockerfile: docker/Dockerfile
+    container_name: celery-beat
+    command: celery -A core beat --loglevel=info
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - worker
+      - redis
+    env_file:
+      - ./backend/.env
+
+  redis:
+    image: redis:7
+    container_name: redis
+    ports:
+      - "6379:6379"
